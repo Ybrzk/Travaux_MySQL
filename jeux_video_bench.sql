@@ -1,0 +1,14 @@
+SHOW DATABASES;
+USE jeux_video;
+SELECT * FROM jeux_video;
+SELECT nom, console FROM jeux_video;
+SELECT nom FROM jeux_video WHERE console = "SuperNES" ORDER BY nom;
+SELECT possesseur FROM jeux_video WHERE nom = "Street Fighter 2";
+SELECT nom, console, prix FROM jeux_video ORDER BY prix LIMIT 4;
+SELECT nom, possesseur FROM jeux_video WHERE possesseur LIKE "%o%";
+SELECT nom, nbre_joueurs_max FROM jeux_video WHERE console = "PC" BETWEEN "4" AND "12";
+SELECT nom, nbre_joueurs_max FROM jeux_video WHERE nbre_joueurs_max  BETWEEN 4 AND 12;
+SELECT DISTINCT console FROM jeux_video;
+SELECT DISTINCT console FROM jeux_video WHERE prix < "15";
+SELECT DISTINCT console FROM jeux_video WHERE nbre_joueurs_max ="4";
+SELECT nom, possesseur FROM jeux_video WHERE nom LIKE 'B%' OR nom LIKE '%F' AND possesseur LIKE '%e%';
